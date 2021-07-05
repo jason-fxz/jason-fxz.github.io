@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jason的小屋 - Nothing is impossible！</title><meta name="keywords" content="OI,题解,算法笔记"><meta name="author" content="Jason Fan"><meta name="copyright" content="Jason Fan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="未来与过去无关，未来由现在决定!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jason的小屋">
+<meta property="og:url" content="https://blog.jasonfan.ml/page/5/index.html">
+<meta property="og:site_name" content="Jason的小屋">
+<meta property="og:description" content="未来与过去无关，未来由现在决定!">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BaNzLT.jpg">
+<meta property="article:author" content="Jason Fan">
+<meta property="article:tag" content="OI,题解,算法笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/10/31/BaNzLT.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.jasonfan.ml/page/5/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0a25a121678668053b816ec15775a1fb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-174011073-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-174011073-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2021-07-05 11:04:36'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://s1.ax1x.com/2020/10/31/BaNzLT.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">66</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Jason的小屋</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/11/18/CF-372B/" title="CF-372B - Counting Rectangles is Fun">CF-372B - Counting Rectangles is Fun</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-18T15:12:35.000Z" title="发表于 2020-11-18 23:12:35">2020-11-18</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/">前缀和</a></span></div><div class="content">CF-372B Counting Rectangles is Fun
+题意
+给定一个 n×mn\times mn×m 的 010101 矩阵, qqq 次询问, 每次询问指定一个子矩形, 求该子矩形种有多少个只包含 000 的子矩阵.
+矩阵从上到下编号 [1,n][1,n][1,n], 从左到右编号 [1,m][1,m][1,m]
+1≤n,m≤40,1≤q≤3×1051\le n,m\le 40,1\le q\le 3\times 10^51≤n,m≤40,1≤q≤3×105
+
+题解
+n,m≤40n,m\le 40n,m≤40 ，qqq 却很大，可以想到应该是一个 O(n2m2)O(n^2m^2)O(n2m2) 的预处理 + O(1)O(1)O(1) 的查询。
+首先，判断 (a,b),(c,d)(a,b),(c,d)(a,b),(c,d)（左上角和右下角）的矩形是否全零可以 O(1)O(1)O(1) ，记 f[L][R][l][r]f[L][R][l][r]f[L][R][l][r] 表示 (L,l),(R,r)(L,l),(R,r)(L,l),(R,r) 是否为全零矩阵 ，如果 L& ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/11/18/CF-715B/" title="CF-715B - Complete The Graph">CF-715B - Complete The Graph</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-18T15:11:04.000Z" title="发表于 2020-11-18 23:11:04">2020-11-18</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a></span></div><div class="content">CF-715B Complete The Graph
+题意
+给 n,(2≤n≤1000)n,(2\le n\le 1000)n,(2≤n≤1000) 点 m,(1≤m≤10000)m,(1\le m\le 10000)m,(1≤m≤10000) 边的无向图，修改 mmm 条边中边为 000 的边，使满足 s,t,(0≤s,t,ui,vi≤n−1,s≠t,0≤wi≤109)s,t,(0\le s,t,u_i,v_i\le n-1,s\ne t,0\le w_i\le 10^9)s,t,(0≤s,t,ui​,vi​≤n−1,s=t,0≤wi​≤109) 的最短路长度是 L,(0≤L≤109)L,(0\le L \le 10^9)L,(0≤L≤109) ，且输出答案的时候边为 000 的边的权值必须在 [1,1018][1,10^{18}][1,1018] 内。
+
+题解
+把所有为零的边赋为 111 跑一遍最短路，用 disdisdis 表示，显然若 dist&gt;Ldis_t &gt; Ldist​&gt;L 输出无解。
+然后我们有一个naive的想法，给那些可修改的边依次 +1+1+1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/11/16/CSP-2020S2/" title="CSP-2020S">CSP-2020S</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-16T15:09:48.000Z" title="发表于 2020-11-16 23:09:48">2020-11-16</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span></div><div class="content">CSP2020暴毙赛
+
+测了一下官方数据，40+85+70+20=21540+85+70+20=21540+85+70+20=215 ，竟然没有一题是 AC 的。。
+失分情况
+T1
+这毒瘤题把人搞傻了，最后调到公元1600年前一定正确，之后的出了点神奇的错误（公元 1582 年 10 月 15 日（含）以后的闰年写挂了）
+T2
+这题应该挺简单，没上 959595 因为
+12345for(int i=0;i&lt;k;i++) if(!((sta&gt;&gt;i)&amp;1))&#123;    if(check(i)) &#123;        sta|=(1&lt;&lt;i);    &#125;
+1后没加ull，但我记得应该加了吧？！毕竟在算答案的时候都有（莫非手抖没保存）
+123456if(t&lt;64) &#123;    ans=(1ull&lt;&lt;t)-n;&#125;else &#123;    ans=(1ull&lt;&lt;63)-n;    ans+=(1ull&lt;&lt;63);&#125;
+还挂 555 分因为 n=0，264n=0，2^{ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/11/16/CF-246E/" title="CF-246E - Blood Cousins Return">CF-246E - Blood Cousins Return</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-16T15:04:05.000Z" title="发表于 2020-11-16 23:04:05">2020-11-16</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/dfn%E5%BA%8F/">dfn序</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a></span></div><div class="content">CF-246E
+题意简述
+给定一片 nnn 个点的森林，每次询问一个节点的K-Son共有个多少不同的名字。一个节点的K-Son即为深度是该节点深度加 KKK 的节点。
+n,q≤105n,q\le 10^5n,q≤105
+
+题解
+首先看一个弱化版的题目：CF208E Blood Cousins ，题意是 给你一片森林，每次询问一个点与多少个点拥有共同的 KKK 级祖先。
+把所有根结点连向 0 ，可以 Dfs 出 dfn 序，要求的便是一个点向下 KKK 层 dfn 序在该点范围内的点有多少个，双关键字（先深度后dfn序）排序后，每次询问二分答案即可。
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152#include &lt;bits/stdc++.h&gt;using namespace std;template&lt;typename T&gt;inline void red(T &amp;x) &#123;    x=0;bool fg=0;c ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/10/31/%E5%8D%9A%E5%AE%A2%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95/" title="博客视频测试">博客视频测试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-31T14:08:48.000Z" title="发表于 2020-10-31 22:08:48">2020-10-31</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/test/">test</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/video/">video</a></span></div><div class="content">只是测试，不要在意内容，
+本视频是初一的时候闲的慌搞的。。。
+
+
+
+
+var player = polyvObject('#plv_9cba273f4305d1fcc2a8c7cb7b3ee7ff_9').videoPlayer({
+    'width':'100%',
+  'height':'300',
+    'vid' : '9cba273f4305d1fcc2a8c7cb7b3ee7ff_9'  
+});
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/10/31/test-post/" title="test post">test post</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-31T13:36:57.000Z" title="发表于 2020-10-31 21:36:57">2020-10-31</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/test/">test</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a></span></div><div class="content">文章测试
+
+H1
+H2
+H3
+分割线
+
+粗体
+斜体
+删除线
+
+引用
+
+图片
+
+链接 link
+有序列表
+
+hello
+world
+nice to meet you
+
+无序列表
+
+第一项
+第二项
+
+第二.一项
+第二.二项
+
+
+第三项
+
+代码块
+123456789101112131415161718#include &lt;bits/stdc++.h&gt;std::vector&lt; std::pair&lt;int,int&gt; &gt; a;int rnd(int l,int r) &#123;    return rand()%(r-l+1)+l;&#125;int main() &#123;    srand(clock()*1000);    int n=rnd(5,10);    printf(&quot;%d\n&quot;,n);    for(int i=1;i&lt;=n;i++) &#123;        printf(&quot;%d &quot;,rnd(1,n));    &#125;printf(&quot;\n&quot;);    for(int  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/10/29/help-shrek-and-donkey/" title="Help Shrek and Donkey">Help Shrek and Donkey</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-29T14:56:24.000Z" title="发表于 2020-10-29 22:56:24">2020-10-29</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/">博弈论</a></span></div><div class="content">CF-98E
+题意
+A 有 nnn 张牌， B 有 mmm 张牌，桌上还有一张反扣着的牌，牌的编号在 [1,n+m+1][1, n + m + 1][1,n+m+1] 之间且互不相同。
+用这些牌进行博弈，每轮每人可以进行如下操作中的一个:
+
+猜桌面上的反扣着的牌上的数字，猜对则获得胜利，猜错则对方胜利。
+询问对方是否有某张牌，若拥有则对方需要出示这张牌，否则继续游戏。
+
+若 A 和 B 都绝顶聪明，求 A 的胜率。  n,m≤1000n, m \le 1000n,m≤1000
+
+题解
+
+“首先我们清楚的知道双方的策略必然包含随机因素，因为这是一个非完全信息博弈，同时由于这是一个零和博弈，双方的策略都希望能够最小化对方获胜的概率。那么模型就很清楚了，混合策略纳什均衡。” ——搬自zxyoi
+
+dpn,mdp_{n,m}dpn,m​ 表先手n张牌，后手m张牌，先手胜的概率，我胜即你输，显然 dpn,m=1−dpm,ndp_{n,m}=1-dp_{m,n}dpn,m​=1−dpm,n​
+然后边界显然：
+
+dpn,0=1dp_{n,0}=1dpn,0​=1 先手知道桌上牌，必胜
+dp0,m=1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/10/29/improvements/" title="Improvements ">Improvements </a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-29T14:54:48.000Z" title="发表于 2020-10-29 22:54:48">2020-10-29</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%80%9D%E7%BB%B4%E9%A2%98/">思维题</a></span></div><div class="content">GYM-100553I
+in zh-CH
+题意简述
+原题说的是鬼话，这里是人话转述：
+有 n+1n+1n+1 个点 x0,x1,…,xnx_0,x_1,\dots,x_nx0​,x1​,…,xn​ 其中 x0=0x_0=0x0​=0 ，xix_ixi​ 两两不同且 1≤xi≤n1\le x_i\le n1≤xi​≤n ，视第 iii 个区间为 (xi−1,xi)(x_{i-1},x_i)(xi−1​,xi​) ，定义 A,BA,BA,B 两区间不相交为 A∩B≠ϕ,A⊈B，B⊈AA\cap B \ne\phi,A\not\subseteq B，B\not\subseteq AA∩B=ϕ,A⊆B，B⊆A。要使没有区间相交，有一些 xix_ixi​ 要改变，求出不用改变的 xix_ixi​ 最多有几个。
+1≤n≤2×1051\le n\le 2\times 10^51≤n≤2×105
+
+题解
+没有区间相交，就是说任意一对区间要么包含要么交集为空。
+仔细想想，可以发现，若最终 nnn 个区间合法，对于 i&lt;ji\lt ji&lt;j ，第 jjj 个区间不能包含第 iii 个 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/10/27/single-cut-of-failure/" title="Single Cut of Failure">Single Cut of Failure</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-27T15:12:34.000Z" title="发表于 2020-10-27 23:12:34">2020-10-27</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%80%9D%E7%BB%B4%E9%A2%98/">思维题</a></span></div><div class="content">2018 ACM-ICPC World Finals H
+IN zh-CH
+题意
+有一个 w×hw\times hw×h 的框（ 1≤w,h≤1081\le w,h \le 10^81≤w,h≤108 ） ，有 nnn 条线段，每条线段两端点在框的不同边上，问每次砍直线，至少砍几刀把所有线砍断，并输出任意一种解。保证没有电线连接到门的四个角落。输入的所有位置都是两两不同的。
+
+（蓝色为线，红色为刀切的直线） 左图一刀可切所有线，右图需两刀。
+
+题解
+首先，稍微观察一下就会发现：最多切两刀，如下图这样对角线的切法一定能断掉所有线（任意一条黑边到其他黑边的路都被断了）
+
+那么我们只要判断能否用一刀切断所有线。
+然后需要一点脑洞:
+
+如图将一个框从左上角切开，再将其拉值，然后便得到了一些区间，考虑这和原图有怎样的对应关系：原图中直线 a 直线 b 有交点，等价于 右图中 a 区间包含 b 的一个端点。
+那就好办了，先把原图“展开”，每条线对应到一个区间，我们切的一刀也是一条直线，那问题转化为找到一个区间 包含原本 nnn 个区间各自的一个端点。
+这东西可以排序后用双指针解决。右指针+1，wh ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/10/06/nagato/" title=" 长门有希的序列(nagato)"> 长门有希的序列(nagato)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-06T13:52:01.000Z" title="发表于 2020-10-06 21:52:01">2020-10-06</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-04T10:51:10.908Z" title="更新于 2021-07-04 18:51:10">2021-07-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a></span></div><div class="content">某联考题，长门有希的序列(nagato)
+Update 2021-4-23: 发现原题，[THUSC2015]平方运算
+跳过废话
+题目背景都是废话
+
+「他一见钟情的对象,并不是我。」
+语调平稳得像是在念论文。
+「他看到的我并不是我,而是资讯统合思念体。」
+我静静聆听。长门又以同样的语调继续说明。
+「只是他不晓得他看到的是什么。毕竟人类只是有机生命体,在意识层面上和资讯统合思念体是
+天差地远。恐怕他看到的是那超越时空的智慧与日积月累的知识吧。尽管他透过终端机读取到的资讯
+仅有九牛一毛,但那资讯带来的压力已足以令他为之倾倒。」
+所以他才会会错意…吗?我看着长门参差不齐的刘海,叹了一口气。中河感受到的长门内在,
+事实上只是资讯统合思念体的某一端。虽然我不是很清楚,但是长门的确实拥有人类无法比拟的庞大
+历史、知识量等奇妙的力量。一不小心误闯进去的中河,为何会茫然自失一点也不足为奇了。
+…
+「我还是有点好奇,你到底是怎么消除他拥有的能力的呢? 」
+尽管清楚那是人类所无法理解的知识,我仍然不自量力地提问。也许我也像中河那样抓狂了吧。
+「那并不复杂,我可以告诉你,也许你可以理解。」
+你是认真的?我有 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/4/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://s1.ax1x.com/2020/10/31/BaNzLT.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Jason Fan</div><div class="author-info__description">未来与过去无关，未来由现在决定!</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">78</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">66</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/jason-fxz"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jason-fxz" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:3078646708@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">域名将在 2021-9-20 到期，请保存 <a target="_blank" rel="noopener" href="https://jason-fxz.github.io">https://jason-fxz.github.io</a> 以防止丢失。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/05/CF1205E/" title="CF1205E - Expected Value Again">CF1205E - Expected Value Again</a><time datetime="2021-05-05T14:21:23.000Z" title="发表于 2021-05-05 22:21:23">2021-05-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/04/28/SDOI-%E6%97%A7%E8%AF%95%E9%A2%98/" title="『SDOI2018』旧试题">『SDOI2018』旧试题</a><time datetime="2021-04-28T14:09:41.000Z" title="发表于 2021-04-28 22:09:41">2021-04-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/04/28/number-theory/" title="推 式 子">推 式 子</a><time datetime="2021-04-28T14:04:51.000Z" title="发表于 2021-04-28 22:04:51">2021-04-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/04/26/THUWC2017T2/" title="『THUWC2017』在美妙的数学王国中畅游">『THUWC2017』在美妙的数学王国中畅游</a><time datetime="2021-04-26T13:58:45.000Z" title="发表于 2021-04-26 21:58:45">2021-04-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/04/25/CF213E/" title="CF213E - Two Permutations">CF213E - Two Permutations</a><time datetime="2021-04-25T13:55:26.000Z" title="发表于 2021-04-25 21:55:26">2021-04-25</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-bolt"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/test/"><span class="card-category-list-name">test</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82/"><span class="card-category-list-name">杂</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/"><span class="card-category-list-name">题解</span><span class="card-category-list-count">53</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%F0%9F%93%9A%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">📚算法笔记</span><span class="card-category-list-count">16</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/BSGS/" style="font-size: 1.17em; color: #999c9f">BSGS</a> <a href="/tags/CRT/" style="font-size: 1.17em; color: #999c9f">CRT</a> <a href="/tags/FFT/" style="font-size: 1.1em; color: #999">FFT</a> <a href="/tags/HDU/" style="font-size: 1.23em; color: #999ea6">HDU</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/LCA/" style="font-size: 1.17em; color: #999c9f">LCA</a> <a href="/tags/LCT/" style="font-size: 1.17em; color: #999c9f">LCT</a> <a href="/tags/Lucas/" style="font-size: 1.1em; color: #999">Lucas</a> <a href="/tags/MST/" style="font-size: 1.1em; color: #999">MST</a> <a href="/tags/Open-Cup/" style="font-size: 1.1em; color: #999">Open Cup</a> <a href="/tags/POJ/" style="font-size: 1.1em; color: #999">POJ</a> <a href="/tags/RMQ/" style="font-size: 1.1em; color: #999">RMQ</a> <a href="/tags/XJ/" style="font-size: 1.5em; color: #99a9bf">XJ</a> <a href="/tags/codeforces/" style="font-size: 1.17em; color: #999c9f">codeforces</a> <a href="/tags/dfn%E5%BA%8F/" style="font-size: 1.1em; color: #999">dfn序</a> <a href="/tags/dp%E4%BC%98%E5%8C%96/" style="font-size: 1.37em; color: #99a4b2">dp优化</a> <a href="/tags/tarjan/" style="font-size: 1.1em; color: #999">tarjan</a> <a href="/tags/trie%E6%A0%91/" style="font-size: 1.17em; color: #999c9f">trie树</a> <a href="/tags/video/" style="font-size: 1.1em; color: #999">video</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 1.1em; color: #999">二分</a> <a href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" style="font-size: 1.1em; color: #999">二分图</a> <a href="/tags/%E5%80%8D%E5%A2%9E/" style="font-size: 1.1em; color: #999">倍增</a> <a href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">关于博客</a> <a href="/tags/%E5%87%B8%E5%8C%85/" style="font-size: 1.1em; color: #999">凸包</a> <a href="/tags/%E5%88%86%E5%9D%97/" style="font-size: 1.23em; color: #999ea6">分块</a> <a href="/tags/%E5%88%86%E6%B2%BB/" style="font-size: 1.1em; color: #999">分治</a> <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/" style="font-size: 1.1em; color: #999">前缀和</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 1.43em; color: #99a6b9">动态规划</a> <a href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/" style="font-size: 1.3em; color: #99a1ac">单调栈</a> <a href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" style="font-size: 1.17em; color: #999c9f">博弈论</a> <a href="/tags/%E5%8F%8D%E6%BC%94/" style="font-size: 1.3em; color: #99a1ac">反演</a> <a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/" style="font-size: 1.1em; color: #999">可持久化</a> <a href="/tags/%E5%93%88%E5%B8%8C/" style="font-size: 1.17em; color: #999c9f">哈希</a> <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 1.23em; color: #999ea6">图论</a> <a href="/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" style="font-size: 1.23em; color: #999ea6">多项式</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 1.1em; color: #999">字符串</a> <a href="/tags/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/" style="font-size: 1.1em; color: #999">容斥原理</a> <a href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" style="font-size: 1.1em; color: #999">平衡树</a> <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" style="font-size: 1.23em; color: #999ea6">并查集</a> <a href="/tags/%E6%80%9D%E7%BB%B4%E9%A2%98/" style="font-size: 1.23em; color: #999ea6">思维题</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">16</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">78</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-05T03:04:33.814Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By Jason Fan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (avatar,mail) => {
+    if (avatar) return avatar
+    let defaultIcon = '?d=identicon'
+    let iconUrl = `https://gravatar.loli.net/avatar/${mail + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const loadWaline = () => {
+      Waline.Widget.RecentComments({
+        el: '#card-newest-comments .aside-list',
+        serverURL: 'https://waline-comment.vercel.app',
+        count: 6
+      }).then(comments => {
+        const walineArray = comments.map(function (e) {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': getIcon(e.QQAvatar,e.mail),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+        generateHtml(walineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+    }
+
+    if (typeof Waline === 'function') loadWaline() 
+    else getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js').then(loadWaline)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
