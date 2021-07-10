@@ -1,0 +1,49 @@
+- class_name: 友情链接
+  class_desc: '大佬们'
+  link_list:
+    - name: moonpie
+      link: https://moonpie.cf/
+      avatar: https://z3.ax1x.com/2021/05/03/geBQtx.jpg
+      descr: 左边的大佬
+    - name: wuhao2005
+      link: https://www.luogu.com.cn/blog/81274/
+      avatar: https://z3.ax1x.com/2021/05/02/gZfpUe.png
+      descr: 右边的大佬兼D王
+    - name: fAKe
+      link: http://arthas.org/
+      avatar: https://z3.ax1x.com/2021/05/03/gehE3d.jpg
+      descr: C语言大师兼电脑大师
+    - name: Jacder Zhang
+      link: https://coderoj.gitee.io/
+      avatar: https://coderoj.gitee.io/images/avatar.png
+      descr: 传奇电脑大师
+    - name: Krimson
+      link: https://www.cnblogs.com/Guts/
+      avatar: https://z3.ax1x.com/2021/05/03/gehdET.png
+      descr: 涛神永远滴神
+
+
+- class_name: 工具网站
+  class_desc: 效率++
+  link_list:
+    - name: Graph-editor
+      link: https://csacademy.com/app/graph_editor/
+      avatar: https://z3.ax1x.com/2021/05/02/gepRnf.png
+      descr: 图论画图
+    - name: Geogebra
+      link: https://www.geogebra.org/
+      avatar: https://z3.ax1x.com/2021/05/02/gepT9s.png
+      descr: 数学作图
+    - name: LaTeX-Live
+      link: https://latexlive.com/
+      avatar: https://z3.ax1x.com/2021/05/02/gep73n.png
+      descr: 在线 LaTeX 渲染
+
+
+# - [图论画图](https://csacademy.com/app/graph_editor/)
+# - [数学作图](https://www.geogebra.org/)
+# - [函数作图](https://www.desmos.com/calculator?lang=zh-CN)
+# - [在线LaTeX](https://latexlive.com/)
+# - [路过图床](https://imgchr.com/)
+
+# - [LaTeX公式指南](https://www.zybuluo.com/codeep/note/163962)
