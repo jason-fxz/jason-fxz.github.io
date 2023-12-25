@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jason Fan. - Nothing is impossible！</title><meta name="keywords" content="OI,题解,算法笔记"><meta name="author" content="jasonfan"><meta name="copyright" content="jasonfan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="未来与过去无关，未来由现在决定!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jason Fan.">
+<meta property="og:url" content="https://jason-fxz.github.io/page/6/index.html">
+<meta property="og:site_name" content="Jason Fan.">
+<meta property="og:description" content="未来与过去无关，未来由现在决定!">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg">
+<meta property="article:author" content="jasonfan">
+<meta property="article:tag" content="OI,题解,算法笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jason-fxz.github.io/page/6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0a25a121678668053b816ec15775a1fb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-174011073-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-174011073-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Jason Fan.',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2023-12-25 16:30:10'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">65</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 浏览</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/wallpaper/"><i class="fa-fw fas fa-images"></i><span> 壁纸</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tools/calc/"><i class="fa-fw fas fa-calculator"></i><span> 计算器</span></a></li><li><a class="site-page child" href="/tools/base64/"><i class="fa-fw fab fa-js-square"></i><span> Base64</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-cubes"></i><span> 闲言碎语</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://z3.ax1x.com/2021/11/20/ILznxg.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Jason Fan.</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 浏览</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/wallpaper/"><i class="fa-fw fas fa-images"></i><span> 壁纸</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tools/calc/"><i class="fa-fw fas fa-calculator"></i><span> 计算器</span></a></li><li><a class="site-page child" href="/tools/base64/"><i class="fa-fw fab fa-js-square"></i><span> Base64</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-cubes"></i><span> 闲言碎语</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Jason Fan.</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/jason-fxz" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jasonfan.ml@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=3078646708" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/9d4375f1/" title="原根简记">原根简记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-29T21:47:21.000Z" title="发表于 2020-12-29 21:47:21">2020-12-29</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-29T21:47:21.000Z" title="更新于 2020-12-29 21:47:21">2020-12-29</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">算法笔记</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E8%AE%BA/">数论</a></span></div><div class="content">定义
+阶：对于 a,m∈N∗,gcd⁡(a,m)=1a,m\in \mathbf{N^{\ast}},\gcd(a,m)=1a,m∈N∗,gcd(a,m)=1 若 nnn 为最小的正整数满足：
+an≡1(modm)a^n\equiv 1\pmod{m}
+an≡1(modm)
+称 nnn 为 aaa 模 mmm 的阶，记作 δm(a)\delta_m (a)δm​(a) 。
+显然若 an≡1(modm)a^n \equiv 1\pmod{m}an≡1(modm) ，则 δm(a)∣n\delta_m(a)\mid nδm​(a)∣n
+
+原根：g,m∈N∗g,m\in \mathbf{N^{\ast}}g,m∈N∗ 。若 gcd⁡(g,m)=1\gcd(g,m)=1gcd(g,m)=1 且 δm(g)=φ(m)\delta_m(g)=\varphi(m)δm​(g)=φ(m) 则称 ggg 为模 mmm 的原根。
+性质 1
+设 m,a,b∈N∗,gcd⁡(a,m)=gcd⁡(b,m)=1m,a,b\in \mathbf{N}^{\ast},\gcd(a,m)=\gcd(b,m)=1m,a, ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/853f3068/" title="XJ - 铳鸭">XJ - 铳鸭</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-25T22:03:45.000Z" title="发表于 2020-12-25 22:03:45">2020-12-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-25T22:03:45.000Z" title="更新于 2020-12-25 22:03:45">2020-12-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a></span></div><div class="content">题面
+
+确实是原题 BZOJ3838
+
+题解
+考虑 模拟费用流（显然跑费用流铁定 TLE ，故这里只是 模拟 ，来发现其本质在干哈）：
+考虑建图：
+
+建 nnn 个点 ，∀i∈[1,n),i→i+1\forall i\in[1,n),i\to i+1∀i∈[1,n),i→i+1 连边容量 +∞+\infty+∞ 费用 000。
+建源汇点 s′,ts&#x27;,ts′,t ，对于所有 (，s′→is&#x27;\to is′→i 容量 111，费用为该位置代价； 对于所有 )，i→ti\to ti→t 容量 111，费用为该位置代价
+实际源点 sss 向 s′s&#x27;s′ 连边，容量为 k/2k/2k/2，费用为 000
+
+以上建图正确性显然，跑最小费用最大流就完事了，现在来考虑以下这实际在干嘛。
+
+在做费用流时，每次最短路增广一单位流量，如上图 橙/绿 线就是一次合法增广。对于一次增广，如橙线经过的两端点 a,ba,ba,b 就是这次选中的括号，显然是一个左括号一个右括号。再考虑这个图上增广路不可能从 s′s&#x27;s′ 出去再绕到 s′s&#x27;s′ ，也就是说之前某 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/5c90850c/" title="cubelia">cubelia</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-25T21:52:41.000Z" title="发表于 2020-12-25 21:52:41">2020-12-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-25T21:52:41.000Z" title="更新于 2020-12-25 21:52:41">2020-12-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/RMQ/">RMQ</a></span></div><div class="content">题意
+定义一个长度为 nnn 的序列 AAA 的最大前缀和 maxpre(1,n)\mathrm{maxpre}(1,n)maxpre(1,n) 为 max⁡i=1nsumi\max_{i=1}^{n}sum_imaxi=1n​sumi​ ，其中 sumi=∑i=1nAisum_i = \sum_{i=1}^n A_isumi​=∑i=1n​Ai​
+现给你长度为 nnn 的序列 aaa，以及 mmm 个询问 qqq ，每次给出 l,rl,rl,r ，让你求出 ∑i=lr∑j=irmaxpre(i,j)\sum_{i=l}^{r}\sum_{j=i}^{r} \mathrm{maxpre}(i,j)∑i=lr​∑j=ir​maxpre(i,j)
+强制在线， n≤2×106,q≤107n\leq 2\times 10^6,q\leq 10^7n≤2×106,q≤107
+
+题解
+把 maxpre(l,r)\mathrm{maxpre}(l,r)maxpre(l,r) 拆开来看，那么 maxpre(l,r)=max⁡i=lrsumi−suml−1\mathrm{maxpre}(l,r) = \ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/ac1e5265/" title="XJ - 合唱队形">XJ - 合唱队形</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-25T21:49:55.000Z" title="发表于 2020-12-25 21:49:55">2020-12-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-25T21:49:55.000Z" title="更新于 2020-12-25 21:49:55">2020-12-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/XJ/">XJ</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94/">莫比乌斯反演</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AD%9B%E6%B3%95/">筛法</a></span></div><div class="content">
+  92ce3867a25b048540c10275d83b5b1fe4f80d07b2eaafcdfcbf1cce59685beccc932a92d7c1af1ffe6333b2335c25c24a4b446e776118a63f5ab377f3b29a07eb144743c4dcaa9e93e65e7216ea7783976ac81a3f42994bc725ea996c4594fc24d4ab9c9e17c1357a70bd5a595dfcd67e0a693e37605b51a9d6b19b3dc9df8be64d6c9b462d5ef9b2ca27f277fe54046ab5bdf17bb04ca9a7612374a24fbd9c07a81c79e1eda33f98e7a8964649081b9fbb9ee7a9b2fe2c05e15bc475c5f76edd445f5aaf218a5584e081dde8304e5024013826ae1fce0ebe611062c3ec73d82e0863c6399a84a846ac40d1f40e1245fe103b9ab713e97a2 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/c257fe6d/" title="XJ - 背包++">XJ - 背包++</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-25T21:47:12.000Z" title="发表于 2020-12-25 21:47:12">2020-12-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-25T21:47:12.000Z" title="更新于 2020-12-25 21:47:12">2020-12-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/XJ/">XJ</a></span></div><div class="content">
+  92ce3867a25b048540c10275d83b5b1fcae42cedd78a1cf9bb795acf5b256f84f53bd16814341096751747906883aa2b82acaf615dec55c8f33ae90e666ea560af46bf723b1b61c1c8e21ddfb18c6b15ac1ee423bada32ac87bfdc56b44d7700fc5d11eccc746898e450b7e57cab245d492141469e7d8de86a1f05464c77573a9332f3eb54fdb1ef69893d9eba4956eef155f02e2f12d0fadc5886cf75da96432394dd12bf80276d90e1218dd72c8b1d666b3386fcbdf40d418153e9c2bd9a700696417b38ff7d24f72a9bf0cd6ca84ee2918e7107e04e2c0a98d0722e9dcb9f3e28fc1f487f1d17a777696f29913aa233663a3b7be567c74 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/faa2e13b/" title="杜教筛">杜教筛</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-25T21:37:47.000Z" title="发表于 2020-12-25 21:37:47">2020-12-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-25T21:37:47.000Z" title="更新于 2020-12-25 21:37:47">2020-12-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">算法笔记</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%AD%9B%E6%B3%95/">筛法</a></span></div><div class="content">在非线形时间内筛某些奇性函数前缀和
+
+狄利克雷卷积
+(f∗g)(n)=∑d∣nf(d)g(nd)(f\ast g)(n)=\sum_{d\mid n} f(d)g(\tfrac{n}{d})
+(f∗g)(n)=d∣n∑​f(d)g(dn​)
+一些结论，会用到（ 注: I(n)=1,id(n)=n,ϵ(n)=[n=1]I(n)=1,id(n)=n,\epsilon(n)=[n=1]I(n)=1,id(n)=n,ϵ(n)=[n=1] ）
+φ∗I=idμ∗I=ϵμ∗id=φ\begin{aligned}
+\varphi \ast I=id\\
+\mu \ast I=\epsilon\\
+\mu \ast id=\varphi
+\end{aligned}
+φ∗I=idμ∗I=ϵμ∗id=φ​
+线性筛 φ,μ\varphi,\muφ,μ
+12345678910111213141516171819const int N = 100000;int p[N],tot;ll phi[N],mu[N];bool v[N];void init(int n) &#123;    for(int i=2;i&l ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/70018e1b/" title="本质不同基环树计数 &amp; Burnside ">本质不同基环树计数 &amp; Burnside </a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-22T21:41:15.000Z" title="发表于 2020-12-22 21:41:15">2020-12-22</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-17T15:15:15.000Z" title="更新于 2021-11-17 15:15:15">2021-11-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%A0%91%E5%BD%A2dp/">树形dp</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%BE%A4%E8%AE%BA%E8%AE%A1%E6%95%B0/">群论计数</a></span></div><div class="content">题意
+给一颗 nnn 个点的内向基环树，每个点的出度为一，每个点可染 mmm 种颜色，求本质不同的染色方案数。 mod 109+7\bmod 10^9+7mod109+7
+m≤109,3≤n≤105m\le 10^9,3\le n\le 10^5
+m≤109,3≤n≤105
+
+题解
+基环树一个重要的特征是环，考虑先算出环上每个点对应子树的染色方案数。
+其中要判断两颗子树是否同构，需要树哈希：
+
+按照 dfs 序可以将树上结点对应到序列上，在序列上填上对应结点的深度，如上图得到序列为:
+12333232\begin{array}{c}
+1&amp;2&amp;3&amp;3&amp;3&amp;2&amp;3&amp;2
+\end{array}
+1​2​3​3​3​2​3​2​
+显然，根据序列可以还原出形态唯一的树。那么树哈希便转换成了序列上的哈希。具体的，需要递归处理，记 hash(u)hash(u)hash(u) 为 uuu 子树的哈希值，初始 hash(u)=depuhash(u)=dep_uhash(u)=depu​ ，插入 vvv 子树，就相当于两个序列接起来，hash(u)′ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/9ee1d365/" title="ZJOI2014力">ZJOI2014力</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-22T21:29:53.000Z" title="发表于 2020-12-22 21:29:53">2020-12-22</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-22T21:29:53.000Z" title="更新于 2020-12-22 21:29:53">2020-12-22</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/FFT/">FFT</a></span></div><div class="content">ZJOI2014力
+题意
+给出 nnn 个数 q1,q2,…qnq_1,q_2, \dots q_nq1​,q2​,…qn​  ，定义
+Fj=∑i=1j−1qi×qj(i−j)2−∑i=j+1nqi×qj(i−j)2F_j=\sum_{i=1}^{j-1} \frac{q_i\times q_j}{(i-j)^2} - \sum_{i=j+1}^n \frac{q_i\times q_j}{(i-j)^2}
+Fj​=i=1∑j−1​(i−j)2qi​×qj​​−i=j+1∑n​(i−j)2qi​×qj​​
+Ei=FiqiE_i=\frac{F_i}{q_i}
+Ei​=qi​Fi​​
+对于 1≤i≤n1\le i\le n1≤i≤n ，求 EiE_iEi​ 的值。1≤n≤105,0&lt;qi&lt;1091\le n \le 10^5 ,0\lt q_i \lt 10^91≤n≤105,0&lt;qi​&lt;109 .
+
+题解
+Ej=∑i=1j−1qi(i−j)2−∑i=j+1nqi(i−j)2Ej=∑i=0jqi(i−j)2−∑i=jnqi(i−j)2E_j=\sum_{i=1}^ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/8ec018cb/" title="网络流最小割">网络流最小割</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-11T22:12:17.000Z" title="发表于 2020-12-11 22:12:17">2020-12-11</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-11T22:12:17.000Z" title="更新于 2020-12-11 22:12:17">2020-12-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">算法笔记</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a></span></div><div class="content">网络流最小割相关
+
+最小割等于最大流，最小割可以用最大流求的，那么重点在于如何建模，将要求的东西转换为最小割。
+最小割求方案
+随便输出一种方案只要在残量网络上从源点 BFS ，能到的点在 SSS 集合中，不能到的点在 TTT 集合中，∀(u,v),u∈S,v∈T\forall (u,v),u\in S ,v\in T∀(u,v),u∈S,v∈T 且 u,vu,vu,v 满流则该边属于最小割集。
+最小割可行边
+就是在某个最小割集中出现的边，设边 (u,v)(u,v)(u,v) ，其为可行边的充要条件：
+
+该边满流 。
+残量网络上不存在 uuu 到 vvv 的增广路。
+
+
+若不满流显然可以找到另一条更小的满流的限制流量的边。
+若满流但在残余网络中能找到入点到出点的路径，那么需要同时割掉这条边和残余网络中路径上某条边才能实现“割”，而这两条边上的流量和一定等于其他某条或某几条满流的边的流量和，否则可以继续增广，又因为位于残余网络上的那条边一定不满流，所以这种割法不是最小割。
+
+判断一条边是否可行直接 BFS 即可，单次 O(n)O(n)O(n)
+如果在同一个图上大量判断，可以用 tarjan ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/7bfde239/" title="SDOI2014 - LIS">SDOI2014 - LIS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-10T22:05:59.000Z" title="发表于 2020-12-10 22:05:59">2020-12-10</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-10T22:05:59.000Z" title="更新于 2020-12-10 22:05:59">2020-12-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a></span></div><div class="content">LOJ - 2196
+题意
+给定长度为 NNN 序列 AAA ，序列中的每一项 AiA_iAi​ 有删除代价 BiB_iBi​ 和附加属性 CiC_iCi​。
+请删除若干项，使得 AAA 的最长上升子序列长度减少至少 111，且付出的代价之和最小，并输出方案。如果有多种方案，请输出将删去项的附加属性排序之后，字典序最小的一种。
+N≤700N\le 700 
+N≤700
+
+题解
+求 LIS 跑一遍 DP 即可，记最大的 DP 值为 mxdpmxdpmxdp ，从 DP 值等于 mxdpmxdpmxdp 的位置倒推回去，按转移关系建边得到一个转移图，显然入度为零的都是 DP 值为一的，出度为零的都是 DP 值为 mxdpmxdpmxdp 的。现在就是要求最小的代价使入度为零的点与出度为 mxdpmxdpmxdp 的点不连通。
+那不就是最小割吗。具体建图：
+
+超级源点 SSS 连向所有 DP 值为零的点，边权 +∞+\infty+∞
+所有 DP 值为 mxdpmxdpmxdp 的点连向超级汇点 TTT 边权 +∞+\infty+∞
+对于所有 dp[u]+1=dp[v],u&lt;v,Au&l ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/5/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#content-inner">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#content-inner">13</a><a class="extend next" rel="next" href="/page/7/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">jasonfan</div><div class="author-info__description">未来与过去无关，未来由现在决定!</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">65</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://jason-fxz.github.io"><i class="fa fa-home"></i><span>My Web</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jason-fxz" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jasonfan.ml@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=3078646708" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/63ac1396/" title="大一程设期末机考游记">大一程设期末机考游记</a><time datetime="2023-12-25T23:59:00.000Z" title="发表于 2023-12-25 23:59:00">2023-12-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/new-start/" title="高考结束之后的事">高考结束之后的事</a><time datetime="2023-08-11T08:11:32.000Z" title="发表于 2023-08-11 08:11:32">2023-08-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/823418d/" title="attention">attention</a><time datetime="2021-11-19T18:43:12.000Z" title="发表于 2021-11-19 18:43:12">2021-11-19</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">124</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-02-04T00:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-25T16:30:08.322Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2023 By jasonfan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome <i class="fa-spin fas fa-fan"></i> to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
+    jinrishici.load(function (result) {
+      if (true) {
+        var sub = "未来与过去无关，未来由现在决定!,Never say never!".length == 0 ? new Array() : "未来与过去无关，未来由现在决定!,Never say never!".split(',')
+        var content = result.data.content
+        var both = sub.unshift(content)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = result.data.content
+      }
+    })
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (ava,mail) => {
+    if (ava) return ava
+    let defaultIcon = '?d=identicon'
+    let iconUrl = "https://gravatar.loli.net/avatar/" + mail + defaultIcon
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const loadWaline = () => {
+      Waline.Widget.RecentComments({
+        serverURL: 'https://jason-blog-comment.vercel.app',
+        count: 6
+      }).then(res => {
+        const walineArray = res.comments.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': getIcon(e.QQAvatar,e.mail),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+        generateHtml(walineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+    }
+
+    if (typeof Waline === 'function') loadWaline() 
+    else getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js').then(loadWaline)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.16/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?jason-fxz";
+            var git_color =['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c'];
+            var git_user ="jason-fxz";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style>undefined</style><!-- hexo injector body_end end --></body></html>
