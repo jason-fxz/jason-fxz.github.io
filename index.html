@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jason Fan. - Nothing is impossible！</title><meta name="keywords" content="OI,题解,算法笔记"><meta name="author" content="jasonfan"><meta name="copyright" content="jasonfan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="未来与过去无关，未来由现在决定!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jason Fan.">
+<meta property="og:url" content="https://jason-fxz.github.io/index.html">
+<meta property="og:site_name" content="Jason Fan.">
+<meta property="og:description" content="未来与过去无关，未来由现在决定!">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg">
+<meta property="article:author" content="jasonfan">
+<meta property="article:tag" content="OI,题解,算法笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jason-fxz.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0a25a121678668053b816ec15775a1fb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-174011073-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-174011073-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Jason Fan.',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2024-04-08 14:43:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">65</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 浏览</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/wallpaper/"><i class="fa-fw fas fa-images"></i><span> 壁纸</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tools/calc/"><i class="fa-fw fas fa-calculator"></i><span> 计算器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://z3.ax1x.com/2021/11/20/ILznxg.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Jason Fan.</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 浏览</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/wallpaper/"><i class="fa-fw fas fa-images"></i><span> 壁纸</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tools/calc/"><i class="fa-fw fas fa-calculator"></i><span> 计算器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Jason Fan.</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/jason-fxz" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jasonfan.ml@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=3078646708" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/d54fdcb1/" title="我的 NOI Linux 配置">我的 NOI Linux 配置</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-22T19:29:49.000Z" title="发表于 2021-10-22 19:29:49">2021-10-22</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-19T16:20:10.000Z" title="更新于 2021-11-19 16:20:10">2021-11-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9D%82/">杂</a></span></div><div class="content">关于系统
+首先 NOI Linux 2.0 于 2021年9月1日 正式启用 NOI Linux 2.0发布，将于9月1日起正式启用！ ， 阉割版 Ubuntu 20.04.1（话说正经的 Ubuntu20 是 Ubuntu 20.04.03 LTS）
+下载： NOI Linux 2.0版 大概 3.4GB 。 注意 安装系统时请断开网络 （不然会自动更新一些软件，导致与实际比赛时不同）
+软件简表：
+
+
+
+类别
+软件/模块
+版本
+备注说明
+
+
+
+
+系统
+Kernel
+5.4.0-42-generic
+64位
+
+
+语言环境
+GCC
+9.3.0
+C编译器
+
+
+
+G++
+9.3.0
+C++编译器
+
+
+
+FPC
+3.0.4
+Pascal编译器
+
+
+
+Python
+2.7
+非竞赛语言
+
+
+
+
+3.8
+非竞赛语言
+
+
+调试工具
+GDB
+9.1
+
+
+
+
+DDD
+3.3.12
+
+
+
+集成开发环境
+Code::Blocks
+20.03
+C/C++集成开发环境
+
+
+
+Lazarus
+2.0.6
+Pascal集成开发环境
+
+
+
+Geany
+1.36
+C/C++/Pascal（轻量级）集成开发环境
+
+
+文本编 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/52014017/" title="Ubuntu 美化终端">Ubuntu 美化终端</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-20T20:49:46.000Z" title="发表于 2021-07-20 20:49:46">2021-07-20</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-21T20:49:46.000Z" title="更新于 2021-07-21 20:49:46">2021-07-21</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9D%82/">杂</a></span></div><div class="content">Zsh + powerlevel10k 美化 ubuntu 终端</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/8c47c2a7/" title="HEXO 多地同步">HEXO 多地同步</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-28T13:31:11.000Z" title="发表于 2021-08-28 13:31:11">2021-08-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-30T13:31:11.000Z" title="更新于 2021-08-30 13:31:11">2021-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9D%82/">杂</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a></span></div><div class="content">hexo 博客多地编辑</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/63ac1396/" title="大一程设期末机考游记">大一程设期末机考游记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-25T23:59:00.000Z" title="发表于 2023-12-25 23:59:00">2023-12-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-25T23:59:00.000Z" title="更新于 2023-12-25 23:59:00">2023-12-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9D%82/">杂</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ACM-Class/">ACM Class</a></span></div><div class="content">16 周（今天）程设机考AK了 🎉🎉🎉🎉🎉。
+最后 5min 有点极限，有点激动😁 250-&gt;300 就是一个小特判。对，不然真是个250。
+before
+14 周前还是一个写 any_ptr 自闭 4h 的面向对象小白。
+通过 14,15 周的努力，写了 share_ptr, unique_ptr, any, any_ptr, 二级指针，简单 OOP，手写容器，迭代器，等等等，几乎把机考复习题练完了。
+15 周模拟机考 280 rank1。最后 15min 256-&gt;280, T3 过了，T2 整不明白，赛后下发数据发现题意理解有问题。模拟机考每道题 1h，还算稳吧。
+T1
+24min 干完 T1。
+T2
+T2 读题 20min 结果写了也就 20min 。破防，题目理解半天，不如直接写就完了。 1h4min 完成。
+T3
+感觉 T3 时间绰绰有余，以为可以提前AK离场。结果看题又20min，而且这玩意还得一步步写，其实一开始也想不清楚要写那些辅助函数，最后还是按照题目给的伪代码写主体结构一点点想，也就写出来了。
+写完大概还有 40min 🤔，然后调试破防。 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/new-start/" title="高考结束之后的事">高考结束之后的事</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-11T08:11:32.000Z" title="发表于 2023-08-11 08:11:32">2023-08-11</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-11T08:11:32.000Z" title="更新于 2023-08-11 08:11:32">2023-08-11</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/personal/">personal</a></span></div><div class="content">或许冥冥之中自有天意。</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/823418d/" title="attention">attention</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-11-19T18:43:12.000Z" title="发表于 2021-11-19 18:43:12">2021-11-19</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-19T18:43:12.000Z" title="更新于 2021-11-19 18:43:12">2021-11-19</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/personal/">personal</a></span></div><div class="content">attention for NOIP 2021</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/6cf6a846/" title="CSP - 2021S">CSP - 2021S</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-25T19:24:27.000Z" title="发表于 2021-10-25 19:24:27">2021-10-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-04T19:24:27.000Z" title="更新于 2021-11-04 19:24:27">2021-11-04</time></span></div><div class="content">得分
+2021-10-25 现在只有民间数据，
+期望得分： 100+100+40+(0 ∼60)=240∼300100 + 100 + 40 + (0 ~\sim 60) = 240 \sim 300100+100+40+(0 ∼60)=240∼300
+upd: 实际得分 100+100+44+45=289100+100+44+45=289100+100+44+45=289
+做题情况
+
+开题 15min15min15min 先大致看完了所有题目。
+配置 vscode，发现插件炸了（没有代码补全、无法调试），敲了 10min10min10min 缺省源（快速读入等）
+T1 想了 10min10min10min 开始敲，但由于不适应（键盘键位、屏幕太高…） 敲了很久，开考 45min45min45min 才写完，不放心又写了暴力对拍，开考将近 1h1h1h 才结束。
+T2 一眼看出 DP，但一开始在想序列 DP 没想出来，于是写了指数级暴力，开考 1h40min1h40min1h40min 还没想法于是看 T3。T3 也没想法，整了几个结论但没用，写了 404040 分暴力。
+开考 2h1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/d85901c4/" title="XJ - 火之剑圣下西洋">XJ - 火之剑圣下西洋</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-18T20:26:11.000Z" title="发表于 2021-10-18 20:26:11">2021-10-18</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-18T20:26:11.000Z" title="更新于 2021-10-18 20:26:11">2021-10-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/XJ/">XJ</a></span></div><div class="content">
+  92ce3867a25b048540c10275d83b5b1fe4f80d07b2eaafcdfcbf1cce59685beccc932a92d7c1af1ffe6333b2335c25c24a4b446e776118a63f5ab377f3b29a076996962dd329bbaaf960445be218880e6842a9f92ee607a6216ba6d6151634d6577fcf60cd13c54d8827770822a895c51170fff28557c15bc4eb5e3699a302a6ec1201a980cf350296687b50805efc78d2e05656b07422aea9768886dd9604d5ff03a7c8e75946747d318f5091106efffc0a97d3a6eabbc9abb75aaf09d38fbd93644de20d8178551c59dd209fb47fc1dca0c1c9a94692c8a59005f47635a9bad1d82a772bf6db51f597b216642a59d05ab88c7fbd2024870 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/2f9ea7c7/" title="XJ - 汉正街神学学院">XJ - 汉正街神学学院</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-18T19:44:39.000Z" title="发表于 2021-10-18 19:44:39">2021-10-18</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-18T19:44:39.000Z" title="更新于 2021-10-18 19:44:39">2021-10-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/XJ/">XJ</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%87%B8%E5%8C%85/">凸包</a></span></div><div class="content">
+  92ce3867a25b048540c10275d83b5b1fe4f80d07b2eaafcdfcbf1cce59685beccc932a92d7c1af1ffe6333b2335c25c24a4b446e776118a63f5ab377f3b29a076996962dd329bbaaf960445be218880e6842a9f92ee607a6216ba6d6151634d6577fcf60cd13c54d8827770822a895c5f0d5e94ba48132ad10856d05810e29ce0d7da1ae34a19deb9e81c7c574e0e2b7c92b406f568cf049991dd99eb82a046e884205ce7779b0bc53fbad49e4eff285b0d3277a6495a6ea027a5de03393e032b405079fec824f3848a6b82930c339d68ed3634df693426a8e3ebe3a6c513abb44c8414aaef381ebdabf0d2a63c157fabc5ed16ec8306fa39 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/6790221/" title="XJ - 蘄壺螸壚黜">XJ - 蘄壺螸壚黜</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-14T18:15:46.000Z" title="发表于 2021-10-14 18:15:46">2021-10-14</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-14T18:15:46.000Z" title="更新于 2021-10-14 18:15:46">2021-10-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/XJ/">XJ</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/dp%E4%BC%98%E5%8C%96/">dp优化</a></span></div><div class="content">
+  92ce3867a25b048540c10275d83b5b1f671af8e2039eb7453308ef21f3626b19a0fddd040380e3b4071c08ff1fc8c41ebfc647763388717753ce03281eb8f1a59a4ddca9cd9254704e2e1ae05fc0d8a8dcf33d1674c5abdc0cd6043840b85d5b0d777904d220f7eb9b46c866bb6eaf0f36359bd3a322b392760fea98a476234d09207a44e10e5997ddc902c712478933aa3efa78d1ff3f782156288d2d34a58c630a64f2fbf9f82ba8a81ce5dfa17ba0c08cad6854d3763499629985cf49ee68ce1fda958edebb43ad1d34bb38f2e478973146190cd77c3a15091d339e8b8d642a29c33affa772642f994bbecaaf150473dae23c88daded52 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#content-inner">13</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">jasonfan</div><div class="author-info__description">未来与过去无关，未来由现在决定!</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">65</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://jason-fxz.github.io"><i class="fa fa-home"></i><span>My Web</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jason-fxz" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jasonfan.ml@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=3078646708" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/63ac1396/" title="大一程设期末机考游记">大一程设期末机考游记</a><time datetime="2023-12-25T23:59:00.000Z" title="发表于 2023-12-25 23:59:00">2023-12-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/new-start/" title="高考结束之后的事">高考结束之后的事</a><time datetime="2023-08-11T08:11:32.000Z" title="发表于 2023-08-11 08:11:32">2023-08-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/823418d/" title="attention">attention</a><time datetime="2021-11-19T18:43:12.000Z" title="发表于 2021-11-19 18:43:12">2021-11-19</time></div></div></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">124</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-02-04T00:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-04-08T14:43:32.996Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By jasonfan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome <i class="fa-spin fas fa-fan"></i> to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
+    jinrishici.load(function (result) {
+      if (true) {
+        var sub = "未来与过去无关，未来由现在决定!,Never say never!".length == 0 ? new Array() : "未来与过去无关，未来由现在决定!,Never say never!".split(',')
+        var content = result.data.content
+        var both = sub.unshift(content)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = result.data.content
+      }
+    })
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div></body></html>

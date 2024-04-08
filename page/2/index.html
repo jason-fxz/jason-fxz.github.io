@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jason Fan. - Nothing is impossible！</title><meta name="keywords" content="OI,题解,算法笔记"><meta name="author" content="jasonfan"><meta name="copyright" content="jasonfan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="未来与过去无关，未来由现在决定!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jason Fan.">
+<meta property="og:url" content="https://jason-fxz.github.io/page/2/index.html">
+<meta property="og:site_name" content="Jason Fan.">
+<meta property="og:description" content="未来与过去无关，未来由现在决定!">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg">
+<meta property="article:author" content="jasonfan">
+<meta property="article:tag" content="OI,题解,算法笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jason-fxz.github.io/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0a25a121678668053b816ec15775a1fb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-174011073-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-174011073-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Jason Fan.',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2024-04-08 14:43:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">65</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 浏览</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/wallpaper/"><i class="fa-fw fas fa-images"></i><span> 壁纸</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tools/calc/"><i class="fa-fw fas fa-calculator"></i><span> 计算器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://z3.ax1x.com/2021/11/20/ILznxg.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Jason Fan.</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 浏览</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/wallpaper/"><i class="fa-fw fas fa-images"></i><span> 壁纸</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> 小工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tools/calc/"><i class="fa-fw fas fa-calculator"></i><span> 计算器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Jason Fan.</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/jason-fxz" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jasonfan.ml@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=3078646708" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/bee8b330/" title="XJ - 梦色之乡">XJ - 梦色之乡</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-13T09:55:22.000Z" title="发表于 2021-10-13 09:55:22">2021-10-13</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-13T09:55:22.000Z" title="更新于 2021-10-13 09:55:22">2021-10-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83/">树的重心</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/XJ/">XJ</a></span></div><div class="content">题意简述
+给你一个 nnn 个点的树，mmm 次询问，每次询问删除 x,yx,yx,y 两子树后树的重心。
+n,m≤100000n,m \le 100000
+n,m≤100000
+题解
+一个很烂的正解，别看了
+
+    
+        官方题解
+    
+    
+        
+std.cpp:
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/cd9c6cc8/" title="利用 GitHub Actions 自动部署 Hexo">利用 GitHub Actions 自动部署 Hexo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-06T22:04:17.000Z" title="发表于 2021-10-06 22:04:17">2021-10-06</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-06T22:04:17.000Z" title="更新于 2021-10-06 22:04:17">2021-10-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9D%82/">杂</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a></span></div><div class="content">前言
+本文仅介绍用 GitHub Actions 自动部署 Hexo 到 GitHub Pages。且假设你目前是用本地用 Hexo 把博客发布到 GitHub Pages 的。
+正常的，我们创建、修改一篇博文需要经历以下步骤：
+
+在博客根目录 hexo new '文章名'
+找到 .md 文件打开编辑
+发布 hexo clean,hexo g,hexo d
+
+而且上传的是渲染好的博客，源文档还在本地，如果异地编辑还不方便。
+多地同步请参考（请先看完）：HEXO 多地同步，然后你会知道如何将源文件上传到 GitHub 仓库。
+本文将教你如何配置 GitHub Actions 实现在本地上传源文件后自动部署到 GitHub Pages。注意，这个 Action 针对的是存放 Hexo 源文件和网站文件分开存放的场景。
+改 _config.yml
+如果你的 _config.yml 以前是这样配置的：
+1234deploy:  type: git  repo: https://github.com/用户名/仓库名.git  branch: master
+请将 repo 改成 ssh 格式:
+1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/b6cd6b36/" title="XJ - CSP 模拟 (by JacderZhang)">XJ - CSP 模拟 (by JacderZhang)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-06T20:43:56.000Z" title="发表于 2021-10-06 20:43:56">2021-10-06</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-06T20:43:56.000Z" title="更新于 2021-10-06 20:43:56">2021-10-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/XJ/">XJ</a></span></div><div class="content">
+  92ce3867a25b048540c10275d83b5b1f6d70767663e8cb54fbcaac59a66ae62ee3c49b1e1d56c7f1d6fc7b05e0454beacc5edccf68f7a02c07c92e0b08970839d33e6c63d47c3b966bbc5096e809f6012f4f81d47a27782da866e7e92075602225e4421f15981d37e4334e3162097ab9de1777c41cac4d453e57a4f230f27e673c1cda738e537ac7b1c320bb0670e71add66742ee15484fb322c2bee67463cfd9d2c0d5512ccec58701a72df03cd7d6243cdf3cdb72bd340e667e051fc98ceac3cd676ffcde4c48acb5887081c860ada11575311415737d16227f465924c280787005e44b94f7ae4bc55bdf3d0ba02f609f46fc6cb5597b50 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/99957224/" title="「NOIP2020」 微信步数">「NOIP2020」 微信步数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-26T07:53:42.000Z" title="发表于 2021-08-26 07:53:42">2021-08-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-26T07:53:42.000Z" title="更新于 2021-08-26 07:53:42">2021-08-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E6%95%B0/">计数</a></span></div><div class="content">[NOIP2020] 微信步数
+暴力
+先定义走完一次 1∼n1\sim n1∼n 的步骤为一轮。
+考虑所有点一起按照步骤走下去，每步可能会使原本存在的点出界。我们维护每步后剩余的点，累加即可。具体地，每个维度互不干扰，且对与一个维度而言，删除的必然是从左一段连续的区间和从右一段连续的区间，若在该步下维度 iii 剩下 [li,ri][l_i,r_i][li​,ri​] ，那么剩余的总点数为 ∏i=1k(ri−li+1)\displaystyle\prod_{i=1}^{k} (r_i-l_i+1)i=1∏k​(ri​−li​+1) 。
+我们只要一步一步模拟即可，直到没有点剩余。另外判断无穷步：在第一轮后回到起点且还有点剩余。
+复杂度为 O(Tnk)O(Tnk)O(Tnk) ，其中 TTT 为最多跑了几轮。
+CODE
+1234567891011121314151617181920212223242526272829303132333435363738394041typedef long long ll;const int N = 500010;const int M = 16;const ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/6f0d8a8d/" title="拉格朗日插值">拉格朗日插值</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-23T11:33:36.000Z" title="发表于 2021-08-23 11:33:36">2021-08-23</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-23T11:33:36.000Z" title="更新于 2021-08-23 11:33:36">2021-08-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">算法笔记</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/">多项式</a></span></div><div class="content">给你 n+1n+1n+1 个点，求穿过它们的 nnn 次多项式。于是你想到了待定系数高斯消元，不过这 O(n3)O(n^3)O(n3) 的太烂了。于是我们引入拉格朗日插值法，通过构造法整出多项式。
+拉格朗日插值法
+记这 n+1n+1n+1 个点为
+(x0,y0),(x1,y1),(x2,y2),…,(xn,yn)(x_0,y_0),(x_1,y_1),(x_2,y_2),\dots,(x_n,y_n)
+(x0​,y0​),(x1​,y1​),(x2​,y2​),…,(xn​,yn​)
+定义拉格朗日基本多项式 ℓi(x)\ell_i(x)ℓi​(x)
+ℓj(x)=∏i≠jx−xixj−xi\ell_j(x)=\prod_{i\ne j}\frac{x-x_i}{x_j-x_i}
+ℓj​(x)=i=j∏​xj​−xi​x−xi​​
+很容易发现一个性质：
+∀i≠j:ℓj(xi)=0\forall i\ne j :\ell_j(x_i)=0
+∀i=j:ℓj​(xi​)=0
+ℓj(xj)=1\ell_j(x_j) =1
+ℓj​(xj​)=1
+于是我们得到拉格朗日插值多项式为：
+L(x)=∑j ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/2c86c556/" title="XJ - 生死之境">XJ - 生死之境</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-22T20:08:29.000Z" title="发表于 2021-08-22 20:08:29">2021-08-22</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-22T20:08:29.000Z" title="更新于 2021-08-22 20:08:29">2021-08-22</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/XJ/">XJ</a></span></div><div class="content">计算几何？
+
+题意简述
+给你 nnn 个点 pi=(xi,yi)p_i=(x_i,y_i)pi​=(xi​,yi​) ，问你有多少条过原点的直线满足：所有点在该直线上的投影呈轴对称。若有无穷个直线输出 −1-1−1 。
+题解
+考虑我们有一条直线 y=kxy=kxy=kx ，为了避免误差我们用向量表示 (a,b),k=ba(a,b),k=\dfrac{b}{a}(a,b),k=ab​ 。
+考虑 nnn 个点在该直线上的投影，可以用 点积，考虑其几何意义：从原点到某点 pip_ipi​ 的向量在直线上的投影 乘上 向量 (a,b)(a,b)(a,b) 的长度。这可以表示每个点在直线上投影的相对位置。
+我们已经把二维转化成一维了，接着要满足 nnn 个数在数轴上对称。若对称必然存在一个中心点为所有点的平均值，即 o=1n∑i=1naxi+byio = \frac{1}{n}\sum_{i=1}^n ax_i+by_io=n1​∑i=1n​axi​+byi​ ，易得其在二维平面上的点为 O(∑i=1nxin,∑i=1nyin)O\left(\dfrac{\sum_{i=1}^n x_i}{n} ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/8d986756/" title="时间复杂度分析">时间复杂度分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-09T21:58:44.000Z" title="发表于 2021-08-09 21:58:44">2021-08-09</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-09T21:58:44.000Z" title="更新于 2021-08-09 21:58:44">2021-08-09</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></span></div><div class="content">初赛知识点，时间复杂度分析</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/3b824714/" title="CQOI2011 - 放棋子">CQOI2011 - 放棋子</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-20T19:44:53.000Z" title="发表于 2021-07-20 19:44:53">2021-07-20</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-20T19:44:53.000Z" title="更新于 2021-07-20 19:44:53">2021-07-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</a></span></div><div class="content">CQOI2011 - 放棋子
+题意
+给你一个 n×mn\times mn×m 的棋盘，和 ccc 种颜色的棋子，每种棋子有 aia_iai​ 个。要求将所有棋子放到棋盘上，满足不同颜色棋子不能同行或同列。输出方案数，对 109+910^9+9109+9 取模。
+1≤n,m≤30,1≤c≤10,∑ai≤max⁡(250,n×m)1\le n,m\le 30,1\le c\le 10, \sum a_i \le \max(250, n\times m)
+1≤n,m≤30,1≤c≤10,∑ai​≤max(250,n×m)
+题解
+设计 DP 状态 f(i,j,k)f(i,j,k)f(i,j,k) 表示用了 1∼k1\sim k1∼k 种颜色的所有棋子，选了 iii 行 jjj 列填充的方案数。因为不同颜色棋子不能同行或同列，考虑枚举新颜色的棋子占了几行几列，这对原来棋子是无影响。
+f(i,j,k)=∑l=0i−1∑r=0j−1(n−li−l)(m−rj−r)f(l,r,k−1)g(i−l,j−r,ak)f(i,j,k)=\sum_{l=0}^{i-1}\sum_{r=0}^{j-1}\bino ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/fc8b1fba/" title="「HEOI2013」 SAO">「HEOI2013」 SAO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-17T11:19:39.000Z" title="发表于 2021-07-17 11:19:39">2021-07-17</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-17T11:19:39.000Z" title="更新于 2021-07-17 11:19:39">2021-07-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%A0%91%E5%BD%A2dp/">树形dp</a></span></div><div class="content">HEOI2013 SAO
+题意
+给出一颗边有方向的树，求该图的拓扑序数量。
+n≤1000,mod=109+7n\le 1000,mod= 10^9+7n≤1000,mod=109+7
+题解
+f(u,i)f(u,i)f(u,i) 表示以 uuu 为根的子树，uuu 子树内排名为 iii 的方案数。
+考虑转移，枚举 v∈son(u)v\in son(u)v∈son(u) ，将 f(v,j)f(v,j)f(v,j) 合并到 f(u,i)f(u,i)f(u,i)，（两列数，各自顺序不打乱的合并）
+
+
+vvv 在 uuu 前
+再枚举 vvv 子树中有 k(k≥j)k(k\ge j)k(k≥j) 个排在 uuu 前面，对 f(u,i+j)f(u,i+j)f(u,i+j) 累加。
+f(u,i+k)′←f(u,i+k)+(i+k−1i−1)(sizu+sizv−i−ksizv−k)f(u,i)f(v,j)f(u,i+k)&#x27; \gets f(u,i+k)+\binom{i+k-1}{i-1}\binom{siz_u+siz_v-i-k}{siz_v-k}f(u,i)f(v,j)
+f(u,i+k ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/13f5143e/" title="SPOJ - PERIODNI">SPOJ - PERIODNI</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-16T11:16:26.000Z" title="发表于 2021-07-16 11:16:26">2021-07-16</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-17T11:16:26.000Z" title="更新于 2021-07-17 11:16:26">2021-07-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%A0%91%E5%BD%A2dp/">树形dp</a></span></div><div class="content">笛卡尔树，树形dp。
+SP3734 PERIODNI
+题意
+
+给定一个 NNN 列的表格，每列的高度各不相同，但底部对齐，然后向表格中填入 KKK 个相同的数，填写时要求不能有两个数在同一列，或同一行，下图中 b 是错误的填写， a 是正确的填写，因为两个 a 虽然在同一行，但它们中间的表格断开。
+1≤N,K≤500, hi≤1061\le N,K \le 500,\,h_i\le 10^6
+1≤N,K≤500,hi​≤106
+题解
+先考虑一个 n×mn\times mn×m 的矩形，选 kkk 个格子，不能出现同行同列的方案数。
+(nk)×(mk)×k!\binom{n}{k}\times \binom{m}{k} \times k!
+(kn​)×(km​)×k!
+考虑原题，因为连续的一行内只能放一个，所以可从下到上做如下切割（当前区间 [l,r][l,r][l,r] 选择区间最小的 hxh_xhx​，一刀切，得到左右两个独立的块 [l,x−1][l,x-1][l,x−1] 和 [x+1,r][x+1,r][x+1,r]。重复即可）。这个操作实际上对区间建笛卡尔树，树上每个节点对应一 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#content-inner">13</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://z3.ax1x.com/2021/11/20/ILjBZt.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">jasonfan</div><div class="author-info__description">未来与过去无关，未来由现在决定!</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">65</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://jason-fxz.github.io"><i class="fa fa-home"></i><span>My Web</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jason-fxz" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jasonfan.ml@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=3078646708" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/63ac1396/" title="大一程设期末机考游记">大一程设期末机考游记</a><time datetime="2023-12-25T23:59:00.000Z" title="发表于 2023-12-25 23:59:00">2023-12-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/new-start/" title="高考结束之后的事">高考结束之后的事</a><time datetime="2023-08-11T08:11:32.000Z" title="发表于 2023-08-11 08:11:32">2023-08-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/823418d/" title="attention">attention</a><time datetime="2021-11-19T18:43:12.000Z" title="发表于 2021-11-19 18:43:12">2021-11-19</time></div></div></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">124</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-02-04T00:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-04-08T14:43:32.996Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By jasonfan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome <i class="fa-spin fas fa-fan"></i> to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
+    jinrishici.load(function (result) {
+      if (true) {
+        var sub = "未来与过去无关，未来由现在决定!,Never say never!".length == 0 ? new Array() : "未来与过去无关，未来由现在决定!,Never say never!".split(',')
+        var content = result.data.content
+        var both = sub.unshift(content)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = result.data.content
+      }
+    })
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div></body></html>
