@@ -2,6 +2,7 @@
 services:
   jekyll:
     image: amirpourmand/al-folio:v0.14.6
+    network_mode: host
     build: .
     # uncomment these if you are having this issue with the build:
     # /usr/local/bundle/gems/jekyll-4.3.4/lib/jekyll/site.rb:509:in `initialize': Permission denied @ rb_sysopen - /srv/jekyll/.jekyll-cache/.gitignore (Errno::EACCES)
