@@ -84,8 +84,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: blog posts # blog_name will be displayed in your blog page
+blog_description: 
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -114,7 +114,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -123,10 +123,11 @@ disqus_shortname: al-folio # put your disqus shortname
 external_sources:
   # - name: medium.com
   #   rss_url: https://medium.com/@al-folio/feed
-  # - name: LMSYS BLOG
-  #   posts:
-  #     - url: https://lmsys.org/blog/2025-09-28-pdmux/
-  #       published_date: 2025-09-28
+  - name: LMSYS BLOG
+    posts:
+      - url: https://lmsys.org/blog/2025-09-28-pdmux/
+        published_date: 2025-09-28
+        authors: Weihao Cui, Yukang Chen, Xiaoze Fan, Han Zhao, Ziyi Xu, Xusheng Chen, Bingsheng He, Quan Chen
 
 # -----------------------------------------------------------------------------
 # Newsletter
