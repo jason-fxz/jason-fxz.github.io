@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://jason-fxz.github.io/sitemap.xml
+Sitemap: https://jasonfxz.top/sitemap.xml
