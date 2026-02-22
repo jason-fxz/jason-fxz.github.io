@@ -16,6 +16,9 @@
             {% if site.last_name %}
               {{- site.last_name -}}
             {% endif %}
+            {% if site.chinese_name %}
+              &nbsp;|&nbsp;<span class="chinese-name">{{- site.chinese_name -}}</span>
+            {% endif %}
           {% else %}
             {{- site.title -}}
           {% endif %}

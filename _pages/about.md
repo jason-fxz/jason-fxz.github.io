@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: 
 
@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <center> <a href="mailto:jasonfxz@sjtu.edu.cn">Email</a> | <a href="https://github.com/jason-fxz" rel="external nofollow noopener" target="_blank">GitHub</a> | <a href="./assets/pdf/CV.pdf">CV</a></center>
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
